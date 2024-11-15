@@ -1,136 +1,71 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
 <head>
-<title>Video player</title>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Press+Start+2P&display=swap" rel="stylesheet">
-<link rel="icon" href="https://lb123658.github.io/unkrafted/favicon.ico" type="image/ico"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-<style>
-* {
-font-family: 'Press Start 2P', cursive;
-}
-body {
-background: #282828;
-user-select: none;
--webkit-user-select: none;
-}
-#cointainer {
-position: absolute;
-top: 0px;
-left: 0px;
-width: 100%;
-background: black;
-}
-#vid {
-width: 100%;
-position: absolute;
-top: 0px;
-left: 0px;
-background: black;
-}
-#play {
-position: absolute;
-top: 5px;
-left: 5px;
-}
-#pause {
-position: absolute;
-top: 5px;
-left: 55px;
-}
-#vol-up {
-position: absolute;
-top: 5px;
-left: 105px;
-}
-#vol-mute {
-position: absolute;
-top: 5px;
-left: 155px;
-}
-.control {
-z-index: 1;
-width: 40px;
-height: 40px;
-border: none;
-background: grey;
-border-radius: 15px;
-cursor: pointer;
-transition: border-radius 0.5s;
-opacity: 0.8;
-color: white;
-}
-.control:hover {
-border-radius: 5px;
-}
-.control:focus {
-background: red;
-}
-#main-play {
-position: absolute;
-width: 100px;
-height: 100px;
-top: 50%;
-left: 50%;
-margin-left: -50px;
-margin-top: -50px;
-}
-</style>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Dinesh Pandiyan | Awesome Dev</title>
+
+	<link rel="icon" href="favicon.ico" type="image/png" />
+
+	<link href="https://fonts.googleapis.com/css?family=Reem+Kufi|Roboto:300" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/themes/indigo-white.css">
+	<!-- <link rel="stylesheet" href="css/themes/green-white.css"> -->
+	<!-- <link rel="stylesheet" href="css/themes/red-white.css"> -->
+	<!-- <link rel="stylesheet" href="css/themes/grey-white.css"> -->
+	<!-- <link rel="stylesheet" href="css/themes/white-indigo.css"> -->
+	<!-- <link rel="stylesheet" href="css/themes/white-blue.css"> -->
+	<!-- <link rel="stylesheet" href="css/themes/white-grey.css"> -->
+	<!-- <link rel="stylesheet" href="css/themes/white-red.css"> -->
+	<!-- <link rel="stylesheet" href="css/themes/yellow-black.css"> -->
 </head>
-<body onresize="divHeight()" onload="divHeight(); hide(); setVideo()" onmouseover="show()" onmouseout="hide()"> 
-<noscript>Turn on JavaScript to watch this video.</noscript>
-<div id="container">
-<video id="vid">
-  <source id="source" src="#" type="video/mp4">
-  Loading video...
-</video>
-<button id="play" class="control" onclick="playVid()" onmouseover="show()"><span class="material-icons">play_circle</span></button>
-<button id="pause" class="control" onclick="pauseVid()" onmouseover="show()"><span class="material-icons">pause</span></button>
-<button id="vol-up" class="control" onclick="fullVol()" onmouseover="show()"><span class="material-icons">volume_up</span></button>
-<button id="vol-mute" class="control" onclick="lowVol()" onmouseover="show()"><span class="material-icons">volume_off</span></button>
-
-<button id="main-play" class="control" onclick="playVid();"><span class="material-icons" style="font-size:60px;">play_circle</span></button>
-</div>
-<script>
-var vid = document.getElementById("vid");
-var div = document.getElementById("container");
-var go = document.getElementById("play");
-var stop = document.getElementById("pause");
-var vol = document.getElementById("vol-up");
-var quiet = document.getElementById("vol-mute");
-var main = document.getElementById("main-play");
-
-function playVid() {
-vid.play();
-main.style.display = "none";
-}
-function pauseVid() {
-vid.pause();
-}
-function fullVol() {
-vid.volume = 1.0;
-}
-function lowVol() {
-vid.volume = 0.0;
-}
-
-function show() {
-go.style.display = "block";
-stop.style.display = "block";
-vol.style.display = "block";
-quiet.style.display = "block";
-}
-function hide() {
-go.style.display = "none";
-stop.style.display = "none";
-vol.style.display = "none";
-quiet.style.display = "none";
-}
-//load video
-function setVideo() {
-document.getElementById("source").src = location.search.split("src=")[1];
-}
-</script>
-</body> 
+<body>
+	<main>
+		<div class="intro">Hello, I'm Dinesh!</div>
+		<div class="tagline">All-Star Dev | Code Fanatic | Linux Hacker | Bleh</div>
+		<!-- Find your icons from here - https://fontawesome.com/icons?d=gallery&s=brands -->
+		<div class="icons-social">
+			<a target="_blank" href="https://github.com/flexdinesh">
+        <i class="fab fa-github" aria-hidden="true" title="Github"></i>
+        <span class="sr-only">Github</span>
+      </a>
+      <a target="_blank" href="https://twitter.com/flexdinesh">
+        <i class="fab fa-twitter" aria-hidden="true" title="Twitter"></i>
+        <span class="sr-only">Twitter</span>
+      </a>
+      <a target="_blank" href="https://dev.to/flexdinesh">
+        <i class="fab fa-dev" aria-hidden="true" title="DEV Community"></i>
+        <span class="sr-only">DEV Community</span>
+      </a>
+      <a target="_blank" href="https://stackoverflow.com/story/flexdinesh">
+        <i class="fab fa-stack-overflow" aria-hidden="true" title="StackOverflow"></i>
+        <span class="sr-only">StackOverflow</span>
+      </a>
+      <a target="_blank" href="https://www.linkedin.com/in/dineshpandiyan">
+        <i class="fab fa-linkedin" aria-hidden="true" title="LinkedIn"></i>
+        <span class="sr-only">LinkedIn</span>
+      </a>
+      <a target="_blank" href="https://medium.com/@flexdinesh">
+        <i class="fab fa-medium" aria-hidden="true" title="Medium"></i>
+        <span class="sr-only">Medium</span>
+      </a>
+      <a target="_blank" href="https://www.freecodecamp.org">
+        <i class="fab fa-free-code-camp" aria-hidden="true" title="FreeCodeCamp"></i>
+        <span class="sr-only">FreeCodeCamp</span>
+      </a>
+      <a target="_blank" href="https://www.behance.net">
+        <i class="fab fa-behance" aria-hidden="true" title="Behance"></i>
+        <span class="sr-only">Behance</span>
+      </a>
+      <a target="_blank" href="https://codepen.io">
+        <i class="fab fa-codepen" aria-hidden="true" title="CodePen"></i>
+        <span class="sr-only">CodePen</span>
+      </a>
+    </div>
+	</main>
+</body>
 </html>
